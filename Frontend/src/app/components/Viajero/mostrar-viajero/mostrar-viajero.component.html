@@ -1,0 +1,37 @@
+<div class="flex align-items-center justify-content-end bg-cyan-100">
+    <a 
+      pButton 
+      pRipple
+      label="Crear Viajero" 
+      icon="pi pi-user-plus"
+      class="bg-cyan-600"
+      [routerLink]="['/addviajero']">
+    </a>
+</div>
+
+<div class="card">
+    <p-table [value]="viajeros" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Estado</th>
+                <th>Acciones</th> <!-- Columna para los botones -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ViajeroI>
+            <tr>
+                <td>{{ViajeroI.id}}</td>
+                <td>{{ViajeroI.nombre}}</td>
+                <td>{{ViajeroI.direccion}}</td>
+                <td>{{ViajeroI.telefono}}</td>
+                <td>{{ViajeroI.estado}}</td>
+                <td>
+                 
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

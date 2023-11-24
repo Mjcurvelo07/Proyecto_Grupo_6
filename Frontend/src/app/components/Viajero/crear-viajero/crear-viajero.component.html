@@ -1,0 +1,45 @@
+<div>
+    <p-toast></p-toast>
+</div>
+
+<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()" class="p-3 bg-faded">
+
+    <div class="grid">
+        <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-1">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" pInputText formControlName="nombre" placeholder="Nombre" title="Nombre">
+            </div>
+        </div>
+
+        <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-1">
+                <span class="p-inputgroup-addon"><i class="pi pi-home"></i></span>
+                <input type="text" pInputText formControlName="direccion" placeholder="Dirección" title="Dirección">
+            </div>
+        </div>
+
+        <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-1">
+                <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+                <input type="text" pInputText formControlName="telefono" placeholder="Teléfono" title="Teléfono">
+            </div>
+        </div>
+
+        <div class="col-12 sm:col-6">
+            <div class="p-inputgroup mb-1">
+                <span class="p-inputgroup-addon"><i class="pi pi-wallet"></i></span>
+                <input type="text" pInputText formControlName="estado" placeholder="Estado" title="Estado">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-right">
+        <div class="col-12 sm:col-6">
+            <button pButton pRipple type="submit" icon="pi pi-check" label="Enviar" [disabled]="!form.valid"
+                class="mt-4 mr-2"></button>
+            <button pButton pRipple type="button" icon="pi pi-times" label="Cancelar" class="mr-2" (click)="cancel()"></button>
+        </div>
+    </div>
+</form>
+

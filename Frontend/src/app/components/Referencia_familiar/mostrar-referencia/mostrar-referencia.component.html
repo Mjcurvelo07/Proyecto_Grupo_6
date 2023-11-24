@@ -1,0 +1,33 @@
+<div class="flex align-items-center justify-content-end bg-cyan-100">
+    <a pButton pRipple label="Crear Referencia Familiar" icon="pi pi-calendar-plus" class="bg-cyan-600" [routerLink]="['/addreferenciafamiliar']">
+    </a>
+</div>
+
+<div class="card">
+    <p-table [value]="referenciasFamiliar" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ReferenciaFamiliarI>
+            <tr>
+                <td>{{ReferenciaFamiliarI.id}}</td>
+                <td>{{ReferenciaFamiliarI.nombre}}</td>
+                <td>{{ReferenciaFamiliarI.apellido}}</td>
+                <td>{{ReferenciaFamiliarI.direccion}}</td>
+                <td>{{ReferenciaFamiliarI.telefono}}</td>
+                <td>{{ReferenciaFamiliarI.estado}}</td>
+                <td>
+                    <!-- Agrega aquí los botones o enlaces de acciones según tus necesidades -->
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

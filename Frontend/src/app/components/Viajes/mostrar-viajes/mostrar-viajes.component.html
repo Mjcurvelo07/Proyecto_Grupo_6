@@ -1,0 +1,29 @@
+<div class="flex align-items-center justify-content-end bg-cyan-100">
+    <a pButton pRipple label="Crear Viaje" icon="pi pi-calendar-plus" class="bg-cyan-600" [routerLink]="['/addviaje']">
+    </a>
+</div>
+
+<div class="card">
+    <p-table [value]="viajes" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Número de Plaza</th>
+                <th>Fecha de Viaje</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ViajeI>
+            <tr>
+                <td>{{ViajeI.id}}</td>
+                <td>{{ViajeI.numero_plaza}}</td>
+                <td>{{ViajeI.fecha_viaje}}</td>
+                <td>{{ViajeI.estado}}</td>
+                <td>
+                    
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

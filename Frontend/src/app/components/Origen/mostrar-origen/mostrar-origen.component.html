@@ -1,0 +1,29 @@
+<div class="flex align-items-center justify-content-end bg-cyan-100">
+    <a pButton pRipple label="Crear Origen" icon="pi pi-calendar-plus" class="bg-cyan-600" [routerLink]="['/addorigen']">
+    </a>
+</div>
+
+<div class="card">
+    <p-table [value]="origenes" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Código de Origen</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-OrigenI>
+            <tr>
+                <td>{{OrigenI.id}}</td>
+                <td>{{OrigenI.codigo_origen}}</td>
+                <td>{{OrigenI.estado}}</td>
+                <td>
+                    <!-- Agrega aquí los botones o enlaces de acciones según tus necesidades -->
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
